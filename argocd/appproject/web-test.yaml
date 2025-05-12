@@ -1,0 +1,16 @@
+#init bootstrap apps in a new cluster
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: web-test
+  namespace: argocd
+spec:
+  roles:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  sourceRepos:  
+    - "https://github.com/dinhphu2k1-gif/gitops.git"
+  destinations:
+    - server: https://kubernetes.default.svc
+      namespace: "*"
