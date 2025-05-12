@@ -7,7 +7,7 @@ spec:
   project: web-test
   source: 
     repoURL: "https://github.com/dinhphu2k1-gif/gitops.git"
-    path: argocd/web-test
+    path: manifest/web-test/helm
   destination:
     server: https://kubernetes.default.svc
     namespace: web-test
