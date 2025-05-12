@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: web-test
+  namespace: argocd
+spec:
+  project: web-test
+  source: 
+    repoURL: "https://github.com/dinhphu2k1-gif/gitops.git"
+    path: gitops/argocd/web-test
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: web-test
