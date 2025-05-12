@@ -10,5 +10,5 @@ spec:
     repoURL: "https://github.com/dinhphu2k1-gif/gitops.git"
     path: argocd/application
   destination:
-    - server: https://kubernetes.default.svc
-      namespace: argocd
+    server: https://kubernetes.default.svc
+    namespace: argocd
