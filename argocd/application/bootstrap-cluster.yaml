@@ -8,7 +8,7 @@ spec:
   project: bootstrap-cluster
   source: 
     repoURL: "https://github.com/dinhphu2k1-gif/gitops.git"
-    path: gitops/argocd/application
+    path: argocd/application
   destinations:
     - server: https://kubernetes.default.svc
       namespace: "*"
